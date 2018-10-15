@@ -8,39 +8,28 @@
 </head>
 
 <body>
-  <h1>Please enter your order into the below form:</h1>
-  <form class="pa4">
-    Team Chips<br>
-    Yes<input type="radio" name="team-chips" value="yes">
-    No<input type="radio" name="team-chips" value="no"><br>
-    Fish
-    <input type="text" name="fish" placeholder="Initials"><br>
-    Fish Butty
-    <input type="text" name="fish-butty" placeholder="Initials"><br>
-    Battered Sausage
-    <input type="text" name="battered-sausage" placeholder="Initials"><br>
-    Normal Sausage
-    <input type="text" name="normal-sausage" placeholder="Initials"><br>
-    Battered Sausage Butty
-    <input type="text" name="battered-sausage-butty" placeholder="Initials"><br>
-    Cheesy Chips
-    <input type="text" name="cheesy-chips" placeholder="Initials"><br>
-    Chip Butty
-    <input type="text" name="chip-butty" placeholder="Initials"><br>
-    <fieldset id="sauces" class="bn">
-      <legend class="fw7 mb2">Sauces</legend>
-      <div class="flex items-center mb2">
-        <input class="mr2" type="checkbox" id="currysauce" value="currysauce">
-        <label for="currysauce" class="lh-copy">Curry Sauce</label>
-      </div>
-      <div class="flex items-center mb2">
-        <input class="mr2" type="checkbox" id="mushypeas" value="mushypeas">
-        <label for="mushypeas" class="lh-copy">Mushy Peas</label>
-      </div>
-      <div class="flex items-center mb2">
-        <input class="mr2" type="checkbox" id="gravy" value="gravy">
-        <label for="gravy" class="lh-copy">Gravy</label>
-      </div>
-    </fieldset>
+  <header class="bg-light-blue sans-serif pa5">
+    <h1>Please enter your order into the below form:</h1>
+  </header>
+  <form class="ph5 pv4">
+    <div class ="f5">
+        <p>TC: Yes<input type="radio" name="team-chips" value="yes"> No<input type="radio" name="team-chips" value="no"></p>
+        <p>&#128031;: <input type="text" name="fish" placeholder="Initials"></p>
+        <p>FB: <input type="text" name="fish-butty" placeholder="Initials"></p>
+        <p>BS: <input type="text" name="battered-sausage" placeholder="Initials"></p>
+        <p>NS: <input type="text" name="normal-sausage" placeholder="Initials"></p>
+        <p>BSB: <input type="text" name="battered-sausage-butty" placeholder="Initials"></p>
+        <p>CC: <input type="text" name="cheesy-chips" placeholder="Initials"></p>
+        <p>CB: <input type="text" name="chip-butty" placeholder="Initials"></p>
+        <p>BSB: <input type="text" name="battered-sausage-butty" placeholder="Initials"></p>
+        <p>Sauces: 
+          <input type="checkbox" id="currysauce" value="currysauce">
+          <label for="currysauce">Curry Sauce</label>
+          <input type="checkbox" id="mushypeas" value="mushypeas">
+          <label for="mushypeas">Mushy Peas</label>
+          <input type="checkbox" id="gravy" value="gravy">
+          <label for="gravy">Gravy</label>
+          </p>
+    </div>
   </form>
 </body>
