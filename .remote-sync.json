@@ -1,0 +1,19 @@
+{
+  "logger": {
+    "title": "Remote Sync"
+  },
+  "uploadOnSave": false,
+  "useAtomicWrites": false,
+  "deleteLocal": false,
+  "hostname": "34.244.55.86",
+  "port": "22",
+  "target": "/home/kafka",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "username": "kafka",
+  "watch": [],
+  "useAgent": true,
+  "transport": "scp"
+}
