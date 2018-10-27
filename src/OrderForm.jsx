@@ -66,6 +66,30 @@ class OrderForm extends Component {
         socket.emit('sendOrder', orderObj);
     }
 
+    renderStage1() {
+        const menuItems = ['test1', 'test2'];
+        return Object.entries(menuItems).map(([key, value]) => {
+            return (
+
+                <div className="gutter-bottom-10">
+                    <div key={key}>
+                        <MenuItem
+
+                        input = {value}
+                        order = {this.state.order}
+                        falseOrder = {this.state.falseOrder}
+                        updateOrder = {name => this.updateOrder(name)}
+                        updateFalseOrder = {name => this.updateFalseOrder(name)}
+                        falseAddToOrder = {name => this.falseAddToOrder(name)}
+                        falseMinusFromOrder = {name => this.falseMinusFromOrder(name)}
+                        removeFromOrder = {name => this.removeFromOrder(name)}
+                        />
+                    </div>
+                </div>
+            )
+        })
+    }
+
     renderOrder() {
         const order = this.state.order;
         return Object.entries(order).map(([key, value]) => {
@@ -88,15 +112,7 @@ class OrderForm extends Component {
                     : null
                 }
                 { this.state.stage === 1
-                    ? <Stage1
-                    order = {this.state.order}
-                    falseOrder = {this.state.falseOrder}
-                    updateOrder = {name => this.updateOrder(name)}
-                    updateFalseOrder = {name => this.updateFalseOrder(name)}
-                    falseAddToOrder = {name => this.falseAddToOrder(name)}
-                    falseMinusFromOrder = {name => this.falseMinusFromOrder(name)}
-                    removeFromOrder = {name => this.removeFromOrder(name)}
-                        />
+                    ? this.renderStage1()
                     : null
                 }
                 { this.state.stage === 2
@@ -134,40 +150,6 @@ function Landing(props) {
             <label className="font16" htmlFor="initInput">Initials: </label>
             <input className="font16" id="initInput" type="text" name="initials" onChange={props.update} value={props.initials}/>
         </div>
-        </div>
-    )
-}
-
-function Stage1(props) {
-    return (
-        <div className="gutter-bottom-10">
-            <div className="gutter-bottom-10">
-                <label className="font16" htmlFor="orderInput">What would you like? </label>
-                <div className="menu-option">
-                    <MenuItem
-                    input = 'Test'
-                    order = {props.order}
-                    falseOrder = {props.falseOrder}
-                    updateOrder = {name => props.updateOrder(name)}
-                    updateFalseOrder = {name => props.updateFalseOrder(name)}
-                    falseAddToOrder = {name => props.falseAddToOrder(name)}
-                    falseMinusFromOrder = {name => props.falseMinusFromOrder(name)}
-                    removeFromOrder = {name => props.removeFromOrder(name)}
-                    />
-                </div>
-                <div className="menu-option">
-                    <MenuItem
-                    input = 'differentTest'
-                    order = {props.order}
-                    falseOrder = {props.falseOrder}
-                    updateOrder = {name => props.updateOrder(name)}
-                    updateFalseOrder = {name => props.updateFalseOrder(name)}
-                    falseAddToOrder = {name => props.falseAddToOrder(name)}
-                    falseMinusFromOrder = {name => props.falseMinusFromOrder(name)}
-                    removeFromOrder = {name => props.removeFromOrder(name)}
-                    />
-                </div>
-            </div>
         </div>
     )
 }
