@@ -187,8 +187,8 @@ function MenuItem(props) {
                     <button className="increment-order-button add-to-order" type="button" name={props.input} onClick = {() => props.falseAddToOrder(props.input)}><i className="fa fa-plus"></i></button>
                 </div>
                 <div className="order-update-buttons">
-                    {!props.order[props.input] ?
-                        <button className="add-to-order-button" type="button" name={props.input} onClick = {() => props.updateOrder(props.input)}> updateOrder </button>
+                    <button className="add-to-order-button" type="button" name={props.input} onClick = {() => props.updateOrder(props.input)}> updateOrder </button>
+                    {!props.order[props.input] ? ''
                         : <button className="remove-from-order-button" type="button" name={props.input} onClick = {() => props.removeFromOrder(props.input)}> Remove From Order </button>
                     }
                 </div>
