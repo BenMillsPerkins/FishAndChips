@@ -70,21 +70,39 @@ class OrderForm extends Component {
         const menuItems = ['test1', 'test2'];
         return Object.entries(menuItems).map(([key, value]) => {
             return (
+                <div className={"menu-item " + (this.state.order[value] ? 'active-menu-item' : 'inactive-menu-item')}>
+                    <MenuItem
 
-                <div className="gutter-bottom-10">
-                    <div key={key}>
-                        <MenuItem
+                    input = {value}
+                    order = {this.state.order}
+                    falseOrder = {this.state.falseOrder}
+                    updateOrder = {name => this.updateOrder(name)}
+                    updateFalseOrder = {name => this.updateFalseOrder(name)}
+                    falseAddToOrder = {name => this.falseAddToOrder(name)}
+                    falseMinusFromOrder = {name => this.falseMinusFromOrder(name)}
+                    removeFromOrder = {name => this.removeFromOrder(name)}
+                    />
+                </div>
+            )
+        })
+    }
 
-                        input = {value}
-                        order = {this.state.order}
-                        falseOrder = {this.state.falseOrder}
-                        updateOrder = {name => this.updateOrder(name)}
-                        updateFalseOrder = {name => this.updateFalseOrder(name)}
-                        falseAddToOrder = {name => this.falseAddToOrder(name)}
-                        falseMinusFromOrder = {name => this.falseMinusFromOrder(name)}
-                        removeFromOrder = {name => this.removeFromOrder(name)}
-                        />
-                    </div>
+    renderBasket() {
+        const order = this.state.order;
+        return Object.entries(order).map(([key, value]) => {
+            return (
+                <div className="basket-item">
+                    <MenuItem
+
+                    input = {key}
+                    order = {order}
+                    falseOrder = {this.state.falseOrder}
+                    updateOrder = {name => this.updateOrder(name)}
+                    updateFalseOrder = {name => this.updateFalseOrder(name)}
+                    falseAddToOrder = {name => this.falseAddToOrder(name)}
+                    falseMinusFromOrder = {name => this.falseMinusFromOrder(name)}
+                    removeFromOrder = {name => this.removeFromOrder(name)}
+                    />
                 </div>
             )
         })
@@ -112,7 +130,11 @@ class OrderForm extends Component {
                     : null
                 }
                 { this.state.stage === 1
-                    ? this.renderStage1()
+                    ?
+                    <div>
+                        <div className="inactive-order"> {this.renderStage1()} </div>
+                        <div className="basket"> {this.renderBasket()} </div>
+                    </div>
                     : null
                 }
                 { this.state.stage === 2
@@ -156,7 +178,7 @@ function Landing(props) {
 
 function MenuItem(props) {
     return (
-        <div className={"menu-item " + (props.order[props.input] ? 'active-menu-item' : 'inactive-menu-item')}>
+        <div>
             <label className="font16" htmlFor={props.input + "Input"}> {props.input} </label>
             <div className="order-buttons">
                 <div className="input-buttons">
@@ -164,11 +186,11 @@ function MenuItem(props) {
                     <input className="font16 order-input-field" id="NSinput" type="number" name={props.input} onChange={props.updateFalseOrder} value={props.falseOrder[props.input]}/>
                     <button className="increment-order-button add-to-order" type="button" name={props.input} onClick = {() => props.falseAddToOrder(props.input)}><i className="fa fa-plus"></i></button>
                 </div>
-                <div>
-                {!props.order[props.input] ?
-                    <button className="add-to-order-button" type="button" name={props.input} onClick = {() => props.updateOrder(props.input)}> updateOrder </button>
-                    : <button className="remove-from-order-button" type="button" name={props.input} onClick = {() => props.removeFromOrder(props.input)}> Remove From Order </button>
-                }
+                <div className="order-update-buttons">
+                    {!props.order[props.input] ?
+                        <button className="add-to-order-button" type="button" name={props.input} onClick = {() => props.updateOrder(props.input)}> updateOrder </button>
+                        : <button className="remove-from-order-button" type="button" name={props.input} onClick = {() => props.removeFromOrder(props.input)}> Remove From Order </button>
+                    }
                 </div>
             </div>
         </div>

@@ -43,19 +43,30 @@ body {
 }
 
 .menu-item {
-    position: absolute;
+    position: relative;
 }
 
 .inactive-menu-item {
     /*animation-name:position-right-to-left;
     animation-duration: 2s;*/
-    left: 5%;
+    left: 10%;
+}
+
+.inactive-order {
+    width: 800px;
+    display: inline-block;
+}
+
+.basket {
+    float:right;
+}
+
+.basket-item {
+    float:right;
 }
 
 .active-menu-item {
-    animation-name:position-left-to-right;
-    animation-duration: 2s;
-    left: 85%
+    display:none;
 }
 
 .answer-block {
@@ -80,6 +91,10 @@ body {
 
 .order-buttons {
     width: 200px;
+}
+
+.order-update-buttons {
+    height: 25px;
 }
 
 .add-to-order-button {
