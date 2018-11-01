@@ -19,6 +19,9 @@ class OrderForm extends Component {
 
     updateOrder(update) {
         const order = this.state.order;
+        if (this.state.falseOrder[update] < 1) {
+            return this.removeFromOrder(update);
+        }
         if (!isNaN(this.state.falseOrder[update])) {
             order[update] = this.state.falseOrder[update];
         }
@@ -70,6 +73,8 @@ class OrderForm extends Component {
         const menuItems = ['test1', 'test2'];
         return Object.entries(menuItems).map(([key, value]) => {
             return (
+                this.state.order[value] ? ''
+                :
                 <div className={"menu-item " + (this.state.order[value] ? 'active-menu-item' : 'inactive-menu-item')}>
                     <MenuItem
 
