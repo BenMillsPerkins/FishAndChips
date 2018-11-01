@@ -35,7 +35,8 @@ gulp.task('watch', ['compile',], function () {
   var stream = nodemon(
       {
          script: 'public/backend.js', // run ES5 code
-         watch: ['src/','src/OrderForm.jsx','public/'], // watch ES2015 code
+         ext: 'js html css jsx',
+         watch: ['src/**/*','public/'], // watch ES2015 code
          tasks: ['compile-watch'] // compile synchronously onChange
        }
    )
