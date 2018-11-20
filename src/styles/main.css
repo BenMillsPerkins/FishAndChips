@@ -64,6 +64,14 @@ body {
 .basket-item {
     float:right;
 }
+.thanks {
+    margin-left: 50px;
+}
+
+.order-display {
+    float:left;
+    margin-left: 50px;
+}
 
 .active-menu-item {
     display:none;

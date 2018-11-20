@@ -18,9 +18,11 @@ io.on('connection', (socket) => {
       console.log('user disconnected');
   });
   socket.on('sendOrder', (order) => {
+      var newOrder = JSON.parse(fs.readFileSync("donotdelete.json", 'utf8'));
       console.log(order);
-      var jsondetails = JSON.stringify(order);
-      fs.appendFile("donotdelete.json", jsondetails + "\n", function(err) {
+      newOrder.push(order);
+      var fileOrder = JSON.stringify(newOrder);
+      fs.writeFile("donotdelete.json", fileOrder, function(err) {
           if(err) {
               return console.log(err);
           }

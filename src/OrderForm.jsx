@@ -67,6 +67,8 @@ class OrderForm extends Component {
         orderObj['initials'] = this.state.initials;
         orderObj['order'] = this.state.order;
         socket.emit('sendOrder', orderObj);
+        const stage = this.state.stage + 1;
+        this.setState({stage});
     }
 
     renderStage1() {
@@ -146,8 +148,16 @@ class OrderForm extends Component {
                     ? this.renderOrder()
                     : null
                 }
+                { this.state.stage === 3
+                    ? <div>
+                        <div className='thanks'>
+                            Thanks, your order has been placed!
+                        </div>
+                    </div>
+                    : null
+                }
                 <div className="button-row">
-                    {this.state.stage !== 0
+                    {this.state.stage !== 0 && this.state.stage !== 3
                         ? <button className="back-button" type="button" onClick = {() => this.setState({stage: this.state.stage - 1})}><i className="fa fa-chevron-left"></i> Back</button>
                         : null
                     }
