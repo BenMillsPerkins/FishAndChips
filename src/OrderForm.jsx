@@ -156,6 +156,7 @@ class OrderForm extends Component {
                     </div>
                     : null
                 }
+                <br className="clear" />
                 <div className="button-row">
                     {this.state.stage !== 0 && this.state.stage !== 3
                         ? <button className="back-button" type="button" onClick = {() => this.setState({stage: this.state.stage - 1})}><i className="fa fa-chevron-left"></i> Back</button>

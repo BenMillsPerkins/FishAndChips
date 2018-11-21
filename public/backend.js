@@ -12,17 +12,21 @@ app.get('/react-jsx/', (req, res) => {
   res.sendFile(path.resolve(__dirname + '/../build/src/index.js'));
 });
 
+app.get('/donotdelete.json', (req, res) => {
+  res.sendFile(path.resolve(__dirname + '/donotdelete.json'));
+});
+
 io.on('connection', (socket) => {
   console.log('a user connected');
   socket.on('disconnect', () => {
       console.log('user disconnected');
   });
   socket.on('sendOrder', (order) => {
-      var newOrder = JSON.parse(fs.readFileSync("donotdelete.json", 'utf8'));
+      var newOrder = JSON.parse(fs.readFileSync(path.resolve(__dirname + '/donotdelete.json'), 'utf8'));
       console.log(order);
       newOrder.push(order);
       var fileOrder = JSON.stringify(newOrder);
-      fs.writeFile("donotdelete.json", fileOrder, function(err) {
+      fs.writeFile(path.resolve(__dirname + '/donotdelete.json'), fileOrder, function(err) {
           if(err) {
               return console.log(err);
           }

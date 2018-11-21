@@ -20,7 +20,7 @@ class App extends Component {
                 <div className="order-display">
                     Current Order:
                     <Order />
-                    <button className="back-button" type="button" onClick = {() => this.setState({stage: 'OrderForm'})}><i className="fa fa-chevron-left"></i> Add my order</button>
+                    <button className="next-q-button" type="button" onClick = {() => this.setState({stage: 'OrderForm'})}> Add my order <i className="fa fa-chevron-right"></i></button>
                 </div>
                 :
                 <div>

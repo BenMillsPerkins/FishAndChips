@@ -63,6 +63,7 @@ body {
 
 .basket-item {
     float:right;
+    clear:right;
 }
 .thanks {
     margin-left: 50px;
@@ -98,7 +99,7 @@ body {
 }
 
 .order-buttons {
-    width: 200px;
+    width: 300px;
 }
 
 .order-update-buttons {
@@ -227,4 +228,8 @@ body {
     width: 100%;
     bottom: 0;
     position: fixed;
+}
+
+.clear {
+    clear:both;
 }
