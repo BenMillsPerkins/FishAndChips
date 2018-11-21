@@ -57,9 +57,11 @@ class OrderForm extends Component {
     falseMinusFromOrder(handle) {
         const falseOrder = this.state.falseOrder;
         var falseOrderHandle = parseInt(falseOrder[handle]);
-        falseOrderHandle -= 1;
-        falseOrder[handle] = falseOrderHandle;
-        this.setState({falseOrder})
+        if (falseOrderHandle > 0) {
+            falseOrderHandle -= 1;
+            falseOrder[handle] = falseOrderHandle;
+            this.setState({falseOrder})
+        }
     }
 
     sendOrder() {
