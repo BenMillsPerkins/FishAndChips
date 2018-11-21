@@ -126,6 +126,10 @@ class OrderForm extends Component {
 		})
     }
 
+    refreshPage() {
+        window.location.reload();
+    }
+
     render() {
         return (
             <div>
@@ -152,6 +156,9 @@ class OrderForm extends Component {
                     ? <div>
                         <div className='thanks'>
                             Thanks, your order has been placed!
+                        </div>
+                        <div>
+                        <button className="next-q-button" type="button" onClick = {() => this.refreshPage()}> See the full order</button>
                         </div>
                     </div>
                     : null
