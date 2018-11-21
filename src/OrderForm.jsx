@@ -79,7 +79,7 @@ class OrderForm extends Component {
             return (
                 this.state.order[value] ? ''
                 :
-                <div className={"menu-item " + (this.state.order[value] ? 'active-menu-item' : 'inactive-menu-item')}>
+                <div key={key} className={"menu-item " + (this.state.order[value] ? 'active-menu-item' : 'inactive-menu-item')}>
                     <MenuItem
 
                     input = {value}
