@@ -23,8 +23,12 @@ class Order extends Component {
         var fullOrder = [];
         for (var i in data) {
             for (var j in data[i].order) {
+                console.log(data[i].order[j]);
+                const count = data[i].order[j];
                 fullOrder[j] ? '' : fullOrder[j] = [];
-                fullOrder[j].push(data[i].initials);
+                for (var k = 0; k < count; k++) {
+                    fullOrder[j].push(data[i].initials);
+                }
             }
         }
         return Object.entries(fullOrder).map(([key, value]) => {
