@@ -213,7 +213,7 @@ function MenuItem(props) {
             <div className="order-buttons">
                 <div className="input-buttons">
                     <button className="increment-order-button take-from-order" type="button" name={props.input} onClick = {() => props.falseMinusFromOrder(props.input)}><i className="fa fa-minus"></i></button>
-                    <input className="font16 order-input-field" id="NSinput" type="number" name={props.input} onChange={props.updateFalseOrder} value={props.falseOrder[props.input]}/>
+                    <input className="font16 order-input-field" id="NSinput" type="number" min="0" name={props.input} onChange={props.updateFalseOrder} value={props.falseOrder[props.input]}/>
                     <button className="increment-order-button add-to-order" type="button" name={props.input} onClick = {() => props.falseAddToOrder(props.input)}><i className="fa fa-plus"></i></button>
                 </div>
                 <div className="order-update-buttons">
