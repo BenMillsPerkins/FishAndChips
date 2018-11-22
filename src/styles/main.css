@@ -154,6 +154,11 @@ body {
     text-shadow: rgb(133, 70, 41) 0px 1px 0px;
 }
 
+:disabled {
+    background: #D3D3D3;
+    cursor: not-allowed;
+}
+
 .increment-order-button {
     float: right;
     box-shadow: rgb(207, 134, 108) 0px 1px 0px 0px inset;

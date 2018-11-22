@@ -133,6 +133,11 @@ class OrderForm extends Component {
     }
 
     render() {
+        const initials = this.state.initials;
+
+        var submitDisabled = 'test';
+        submitDisabled = initials ? false : true;
+
         return (
             <div>
                 { this.state.stage === 0
@@ -172,7 +177,7 @@ class OrderForm extends Component {
                         : null
                     }
                     { this.state.stage == 0
-                        ? <button className="next-q-button" type="button" onClick = {() => this.setState({stage: this.state.stage + 1})}>On To Order <i className="fa fa-chevron-right"></i></button>
+                        ? <button className="next-q-button" type="button" disabled={submitDisabled} onClick = {() => this.setState({stage: this.state.stage + 1})}>On To Order <i className="fa fa-chevron-right"></i></button>
                         : null
                     }
                     { this.state.stage == 1
