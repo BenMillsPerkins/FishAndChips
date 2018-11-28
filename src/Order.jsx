@@ -18,7 +18,7 @@ class Order extends Component {
           })
     }
 
-    renderOrder() {
+    parseOrder() {
         var data = this.state.data;
         var fullOrder = [];
         for (var i in data) {
@@ -30,14 +30,33 @@ class Order extends Component {
                 }
             }
         }
-        return Object.entries(fullOrder).map(([key, value]) => {
-            return (
-                <div key={key}>
-                    {key}: {value}   {value.length}
-                </div>
-            )
-        })
+
+        if (this.state.data.length != 0) {
+            var parsedOrder = [];
+            for (var item in fullOrder) {
+                parsedOrder[item] = [
+                    '', fullOrder[item].length
+                ];
+                for (var initial in fullOrder[item]) {
+                    parsedOrder[item][0] = parsedOrder[item][0] + ' ' + fullOrder[item][initial];
+                }
+            };
+        };
+
+        return parsedOrder
     }
+
+    renderOrder() {
+        const parsedOrder = this.parseOrder();
+
+        return Object.entries(parsedOrder).map(([key, value]) => {
+                return (
+                    <div key={key}>
+                        {value[1]} {key}: {value[0]}
+                    </div>
+                )
+            })
+        }
 
     render() {
         return (
