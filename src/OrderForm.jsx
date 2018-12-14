@@ -74,7 +74,7 @@ class OrderForm extends Component {
     }
 
     renderStage1() {
-        const menuItems = ['test1', 'test2'];
+        const menuItems = ['team-chips', 'fish', 'fish-butty', 'battered-sausage', 'normal-sausage', 'battered-sausage-butty', 'cheesy-chips', 'chip-butty', 'battered-sausage-butty', 'currysauce', 'mushypeas', 'gravy'];
         return Object.entries(menuItems).map(([key, value]) => {
             return (
                 this.state.order[value] ? ''
