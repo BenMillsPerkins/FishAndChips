@@ -60,7 +60,7 @@ class Order extends Component {
 
     render() {
         return (
-            <div>
+            <div className="orders-container">
                 {this.renderOrder()}
             </div>
         );
