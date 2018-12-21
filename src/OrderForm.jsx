@@ -165,7 +165,7 @@ class OrderForm extends Component {
                             Thanks, your order has been placed!
                         </div>
                         <div>
-                        <button className="next-q-button" type="button" onClick = {() => this.refreshPage()}> See the full order</button>
+                        <button className="button" type="button" onClick = {() => this.refreshPage()}> See the full order</button>
                         </div>
                     </div>
                     : null
@@ -177,16 +177,16 @@ class OrderForm extends Component {
                         : null
                     }
                     { this.state.stage == 0
-                        ? <button className="next-q-button" type="button" disabled={submitDisabled} onClick = {() => this.setState({stage: this.state.stage + 1})}>On To Order <i className="fa fa-chevron-right"></i></button>
+                        ? <button className="button is-warning" type="button" disabled={submitDisabled} onClick = {() => this.setState({stage: this.state.stage + 1})}>On To Order <i className="fa fa-chevron-right"></i></button>
                         : null
                     }
                     { this.state.stage == 1
-                        ? <button className="next-q-button" type="button" onClick = {() => this.setState({stage: this.state.stage + 1})}>Finish Order <i className="fa fa-chevron-right"></i></button>
+                        ? <button className="button is-success" type="button" onClick = {() => this.setState({stage: this.state.stage + 1})}>Finish Order <i className="fa fa-chevron-right"></i></button>
                         : null
                     }
                     {
                         this.state.stage == 2
-                        ? <button className="next-q-button" type="button" onClick = {() => this.sendOrder()}>Yes, this is my order <i className="fa fa-chevron-right"></i></button>
+                        ? <button className="button" type="button" onClick = {() => this.sendOrder()}>Yes, this is my order <i className="fa fa-chevron-right"></i></button>
                         : null
                     }
                </div>
