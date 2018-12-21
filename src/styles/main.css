@@ -1,24 +1,11 @@
 * {
-    font-family: "Open Sans",sans-serif,arial;
-    font-weight: normal;
-}
-
-body {
-    background-color: #F7F7F7;
     padding: 0;
     margin: 0;
 }
 
-.divider {
-    height: 7px;
-    background-color: #19558C;
-    width: 100%;
-    margin-top: 20px;
-    padding: 0px;
-}
-
-.bold {
-    font-weight: bold;
+body {
+    padding: 0;
+    margin: 0;
 }
 
 .monospace {
@@ -69,11 +56,6 @@ body {
     margin-left: 50px;
 }
 
-.order-display {
-    float:left;
-    margin-left: 50px;
-}
-
 .active-menu-item {
     display:none;
 }
@@ -83,10 +65,6 @@ body {
     flex-wrap: nowrap;
     justify-content: space-around;
     margin-bottom: 30px;
-}
-
-.answer-option {
-
 }
 
 .input-buttons {
@@ -136,27 +114,6 @@ body {
     padding: 6px 24px;
     text-decoration: none;
     text-shadow: rgb(133, 70, 41) 0px 1px 0px;
-}
-
-.next-q-button {
-    float: right;
-    box-shadow: rgb(207, 134, 108) 0px 1px 0px 0px inset;
-    background: #B8202E;
-    border-radius: 3px;
-    border: 1px solid rgb(148, 41, 17);
-    display: inline-block;
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-    font-family: Arial;
-    font-size: 13px;
-    padding: 6px 24px;
-    text-decoration: none;
-    text-shadow: rgb(133, 70, 41) 0px 1px 0px;
-}
-
-:disabled {
-    background: #D3D3D3;
-    cursor: not-allowed;
 }
 
 .input-field {
@@ -241,4 +198,24 @@ body {
 
 .clear {
     clear:both;
+}
+
+/* ========== Nate's Styles ========== */
+
+.order-display {
+    padding: 25px 0 25px 50px;
+}
+
+.orders-container {
+    padding-bottom: 10px;
+}
+
+/* Buttons */
+.order-add {
+    margin-top: 10px;
+}
+
+/* Icons */
+.fa {
+    margin-left: 7px;
 }
