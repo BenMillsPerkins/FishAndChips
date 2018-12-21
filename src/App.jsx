@@ -15,12 +15,19 @@ class App extends Component {
     render() {
         return (
             <div>
-                <h1 className="banner-text bold">Fish and Chip Order Form</h1>
+                <section className="hero has-background-light">
+                    <div className="hero-body">
+                        <div className="container">
+                        <h1 className="title">Fish and Chips</h1>
+                        <h2 className="subtitle">Order Form</h2>
+                        </div>
+                    </div>
+                </section>
                 {this.state.stage === 'DisplayOrder' ?
                 <div className="order-display">
                     Current Order:
                     <Order />
-                    <button className="next-q-button" type="button" onClick = {() => this.setState({stage: 'OrderForm'})}> Add my order <i className="fa fa-chevron-right"></i></button>
+                    <button className="button order-add" type="button" onClick = {() => this.setState({stage: 'OrderForm'})}> Add my order <i className="fa fa-chevron-circle-right"></i></button>
                 </div>
                 :
                 <div>
