@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "express": "^4.15.2",
+    "node-sass": "^3.13.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
