@@ -51,8 +51,8 @@ class Order extends Component {
 
         return Object.entries(parsedOrder).map(([key, value]) => {
                 return (
-                    <div key={key}>
-                        {value[1]} {key}: {value[0]}
+                    <div className="order-list-item" key={key}>
+                        <span className="has-text-weight-bold">{value[1]} {key}:</span> {value[0]}
                     </div>
                 )
             })
@@ -60,7 +60,7 @@ class Order extends Component {
 
     render() {
         return (
-            <div className="orders-container">
+            <div className="order-list">
                 {this.renderOrder()}
             </div>
         );
