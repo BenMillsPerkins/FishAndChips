@@ -15,25 +15,30 @@ class App extends Component {
     render() {
         return (
             <div>
-                <section className="hero has-background-light">
+                <section className="hero is-info">
                     <div className="hero-body">
                         <div className="container">
-                        <h1 className="title">Fish and Chips</h1>
-                        <h2 className="subtitle">Order Form</h2>
+                            <h1 className="title">Fish and Chips</h1>
+                            <h2 className="subtitle">Order Form</h2>
                         </div>
                     </div>
                 </section>
                 {this.state.stage === 'DisplayOrder' ?
-                <div className="order-display">
-                    Current Order:
+                <div className="container main-content main-content--home">
+                    <h2 class="subtitle">Current Order:</h2>
                     <Order />
-                    <button className="button order-add" type="button" onClick = {() => this.setState({stage: 'OrderForm'})}> Add my order <i className="fa fa-chevron-circle-right"></i></button>
+                    <button className="button is-info order-add" type="button" onClick = {() => this.setState({stage: 'OrderForm'})}><i className="fa fa-pencil"></i> Add my order</button>
                 </div>
                 :
                 <div>
                     <OrderForm />
                 </div>
                 }
+                <footer className="footer">
+                    <div className="content has-text-centered">
+                        <p><strong>Phone Number:</strong> 01422 842 599</p>
+                    </div>
+                </footer>
             </div>
         );
     }
