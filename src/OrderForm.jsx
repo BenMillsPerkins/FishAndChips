@@ -74,7 +74,7 @@ class OrderForm extends Component {
     }
 
     renderStage1() {
-        const menuItems = ['team-chips', 'fish', 'fish-butty', 'battered-sausage', 'normal-sausage', 'battered-sausage-butty', 'cheesy-chips', 'chip-butty', 'battered-sausage-butty', 'currysauce', 'mushypeas', 'gravy'];
+        const menuItems = ['Team Chips', 'Fish', 'Fish Butty', 'Battered Sausage', 'Plain Sausage', 'Battered Sausage Butty', 'Cheesy Chips', 'Chip Butty', 'Battered Sausage Butty', 'Curry Sauce', 'Mushy Peas', 'Gravy', 'Fish and Chips', 'Small Chips', 'Scampi', 'Pie: Steak n Kidney (Chip Shop)', 'Pie: Meat (Chip Shop)', 'Pie: Beef and Onion (Chip Shop)', 'Pie: Chicken and Mushroom (Chip Shop)', 'Pie: Steak n Kidney (Pie Shop)', 'Pie: Meat (Pie Shop)', 'Pie: Beef and Onion (Pie Shop)', 'Pie: Chicken and Mushroom (Pie Shop)'];
         return Object.entries(menuItems).map(([key, value]) => {
             return (
                 this.state.order[value] ? ''
