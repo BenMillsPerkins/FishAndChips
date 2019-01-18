@@ -74,7 +74,7 @@ class OrderForm extends Component {
     }
 
     renderStage1() {
-        const menuItems = ['Team Chips', 'Fish', 'Fish Butty', 'Battered Sausage', 'Plain Sausage', 'Battered Sausage Butty', 'Cheesy Chips', 'Chip Butty', 'Curry Sauce - Small', 'Curry Sauce - Large', 'Mushy Peas - Small', 'Mushy Peas - Large', 'Gravy - Small', 'Gravy - Large', 'Fish and Chips', 'Small Chips', 'Scampi', 'Beans - Small', 'Beans - Large', 'Chicken Nuggets', 'Steak n Kidney Pie (Chip Shop)', 'Meat Pie (Chip Shop)', 'Beef and Onion Pie (Chip Shop)', 'Chicken and Mushroom Pie (Chip Shop)', 'Steak n Kidney Pie (Pastry Shop)', 'Meat Pie (Pastry Shop)', 'Beef and Onion Pie (Pastry Shop)', 'Chicken and Mushroom Pie (Pastry Shop)'];
+        const menuItems = ['Team Chips', 'Fish', 'Fish Butty', 'Battered Sausage', 'Plain Sausage', 'Battered Sausage Butty', 'Cheesy Chips', 'Chip Butty', 'Scallop', 'Curry Sauce - Small', 'Curry Sauce - Large', 'Mushy Peas - Small', 'Mushy Peas - Large', 'Gravy - Small', 'Gravy - Large', 'Fish and Chips', 'Small Chips', 'Scampi', 'Beans - Small', 'Beans - Large', 'Chicken Nuggets', 'Steak n Kidney Pie (Chip Shop)', 'Meat Pie (Chip Shop)', 'Beef and Onion Pie (Chip Shop)', 'Chicken and Mushroom Pie (Chip Shop)', 'Steak n Kidney Pie (Pastry Shop)', 'Meat Pie (Pastry Shop)', 'Beef and Onion Pie (Pastry Shop)', 'Chicken and Mushroom Pie (Pastry Shop)'];
         return Object.entries(menuItems).map(([key, value]) => {
             return (
                 this.state.order[value] ? ''
