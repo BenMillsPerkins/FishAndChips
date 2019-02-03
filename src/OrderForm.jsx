@@ -150,8 +150,14 @@ class OrderForm extends Component {
                 { this.state.stage === 1
                     ?
                     <div className="columns">
-                        <div className="column is-mobile inactive-order"> {this.renderStage1()} </div>
-                        <div className="column is-mobile basket"> {this.renderBasket()} </div>
+                        <div className="column is-mobile inactive-order">
+                            <h2 className="subtitle has-text-weight-bold">Menu Items:</h2>
+                            {this.renderStage1()}
+                        </div>
+                        <div className="column is-mobile basket">
+                            <h2 className="subtitle has-text-weight-bold">Current Order:</h2>
+                            {this.renderBasket()}
+                        </div>
                     </div>
                     : null
                 }
