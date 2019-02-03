@@ -46,6 +46,29 @@ class Order extends Component {
         return parsedOrder
     }
 
+    parseInits() {
+        var data = this.state.data;
+        var orderedInits = '';
+        for (var i in data) {
+            for (var j in data[i].order) {
+                orderedInits += data[i].initials + ' ';
+            }
+        }
+
+        return orderedInits
+    }
+
+    renderInits() {
+        const parsedInits = this.parseInits();
+
+        return (
+            <div>
+                Orders so far: {parsedInits}
+            </div>
+        )
+    }
+
+
     renderOrder() {
         const parsedOrder = this.parseOrder();
 
@@ -60,8 +83,13 @@ class Order extends Component {
 
     render() {
         return (
-            <div className="order-list">
-                {this.renderOrder()}
+            <div>
+                <div>
+                    {this.renderInits()}
+                </div>
+                <div className="order-list">
+                    {this.renderOrder()}
+                </div>
             </div>
         );
     }
