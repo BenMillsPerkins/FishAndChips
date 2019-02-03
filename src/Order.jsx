@@ -83,12 +83,14 @@ class Order extends Component {
 
     render() {
         return (
-            <div>
-                <div>
-                    {this.renderInits()}
-                </div>
-                <div className="order-list">
+            <div className="columns">
+                <div className="column is-mobile order-list">
+                    <h2 class="subtitle">Current Order:</h2>
                     {this.renderOrder()}
+                </div>
+                <div className="column is-mobile has-ordered">
+                    <h2 class="subtitle">People Who Have Ordered:</h2>
+                    {this.renderInits()}
                 </div>
             </div>
         );
