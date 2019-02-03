@@ -217,7 +217,34 @@ function Landing(props) {
         <div className="container main-content">
             <div className="gutter-bottom-10">
                 <label className="is-size-6 has-text-weight-bold" htmlFor="initInput">Initials: </label>
-                <input className="is-size-6" id="initInput" type="text" name="initials" onChange={props.update} value={props.initials}/>
+                <div className="field dropdown-container">
+                    <div className="control">
+                        <div className="select is-info">
+                            <select id="initInput" name="initials" onChange={props.update} value={props.initials}>
+                                <option>AH</option>
+                                <option>AO</option>
+                                <option>AW</option>
+                                <option>BD</option>
+                                <option>BMP</option>
+                                <option>BR</option>
+                                <option>DO</option>
+                                <option>EC</option>
+                                <option>HBD</option>
+                                <option>KP</option>
+                                <option>LGM</option>
+                                <option>LP</option>
+                                <option>MB</option>
+                                <option>MC</option>
+                                <option>MM</option>
+                                <option>NJ</option>
+                                <option>SSB</option>
+                                <option>WO</option>
+                                <option>Guest 1</option>
+                                <option>Guest 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    </div>
             </div>
         </div>
     )
