@@ -26,6 +26,10 @@ body {
     padding-bottom: 10px;
 }
 
+.has-ordered__list {
+    max-width: 350px;
+}
+
 /* Menu */
 .menu-item,
 .basket-item {
