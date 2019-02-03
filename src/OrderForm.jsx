@@ -212,6 +212,15 @@ class OrderForm extends Component {
     }
 }
 
+function teamInitials() {
+    const team = ["AH", "AO", "AW", "BD", "BMP", "BR", "DO", "EC", "HBD", "KP", "LGM", "LP", "MB", "MC", "MM", "NJ", "SSB", "WO", "Guest1", "Guest2"];
+    const initialsSelect = team.map((p, key) =>
+        <option key={key}>{p}</option>
+    );
+
+    return initialsSelect;
+}
+
 function Landing(props) {
     return (
         <div className="container main-content">
@@ -221,26 +230,7 @@ function Landing(props) {
                     <div className="control">
                         <div className="select is-info">
                             <select id="initInput" name="initials" onChange={props.update} value={props.initials}>
-                                <option>AH</option>
-                                <option>AO</option>
-                                <option>AW</option>
-                                <option>BD</option>
-                                <option>BMP</option>
-                                <option>BR</option>
-                                <option>DO</option>
-                                <option>EC</option>
-                                <option>HBD</option>
-                                <option>KP</option>
-                                <option>LGM</option>
-                                <option>LP</option>
-                                <option>MB</option>
-                                <option>MC</option>
-                                <option>MM</option>
-                                <option>NJ</option>
-                                <option>SSB</option>
-                                <option>WO</option>
-                                <option>Guest 1</option>
-                                <option>Guest 2</option>
+                                {teamInitials()}
                             </select>
                         </div>
                     </div>
@@ -271,8 +261,8 @@ function MenuItem(props) {
                         <span>More</span>
                     </button>
                     <button className="button is-info is-outlined add-to-order-button" type="button" name={props.input} onClick = {() => props.updateOrder(props.input)}>
-                    <span class="icon is-small">
-                        <i class="fa fa-check"></i>
+                    <span className="icon is-small">
+                        <i className="fa fa-check"></i>
                     </span>
                     <span>Update Order</span>
                     </button>
