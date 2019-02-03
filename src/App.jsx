@@ -25,7 +25,6 @@ class App extends Component {
                 </section>
                 {this.state.stage === 'DisplayOrder' ?
                 <div className="container main-content main-content--home">
-                    <h2 class="subtitle">Current Order:</h2>
                     <Order />
                     <button className="button is-info order-add" type="button" onClick = {() => this.setState({stage: 'OrderForm'})}><i className="fa fa-pencil"></i> Add my order</button>
                 </div>
