@@ -62,8 +62,8 @@ class Order extends Component {
         const parsedInits = this.parseInits();
 
         return (
-            <div>
-                Orders so far: {parsedInits}
+            <div className="has-ordered__list">
+                {parsedInits}
             </div>
         )
     }
@@ -85,11 +85,11 @@ class Order extends Component {
         return (
             <div className="columns">
                 <div className="column is-mobile order-list">
-                    <h2 class="subtitle">Current Order:</h2>
+                    <h2 className="subtitle">Current Order:</h2>
                     {this.renderOrder()}
                 </div>
                 <div className="column is-mobile has-ordered">
-                    <h2 class="subtitle">People Who Have Ordered:</h2>
+                    <h2 className="subtitle">People Who Have Ordered:</h2>
                     {this.renderInits()}
                 </div>
             </div>
