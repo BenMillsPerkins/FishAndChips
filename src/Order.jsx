@@ -165,9 +165,10 @@ class Order extends Component {
                     <div className="order-list">
                         {this.renderOrder()}
                     </div>
-                <div className="column is-mobile has-ordered">
-                    <h2 className="subtitle">People Who Have Ordered:</h2>
-                    {this.renderInits()}
+                    <div className="column is-mobile has-ordered">
+                        <h2 className="subtitle">People Who Have Ordered:</h2>
+                        {this.renderInits()}
+                    </div>
                 </div>
             </div>
         );
