@@ -105,6 +105,31 @@ class Order extends Component {
         )
     }
 
+    calcPrice() {
+        var data = this.state.data;
+        var price = this.state.price;
+        for (var i in data) {
+            for (var j in data[i].order) {
+                const count = data[i].order[j];
+                fullOrder[j] ? '' : fullOrder[j] = [];
+                for (var k = 0; k < count; k++) {
+
+                }
+            }
+        }
+    }
+
+
+    renderPrice() {
+        const calcPrice = this.calcPrice();
+
+        return (
+            <div>
+                Approximate Price: {calcPrice}
+            </div>
+        )
+    }
+
     renderInits() {
         const parsedInits = this.parseInits();
 
@@ -144,6 +169,15 @@ class Order extends Component {
                     <h2 className="subtitle">People Who Have Ordered:</h2>
                     {this.renderInits()}
                 </div>
+<<<<<<< Updated upstream
+=======
+                <div>
+                    {this.renderPrice()}
+                </div>
+                <div className="order-list">
+                    {this.renderOrder()}
+                </div>
+>>>>>>> Stashed changes
             </div>
         );
     }
