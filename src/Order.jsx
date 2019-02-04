@@ -6,16 +6,24 @@ class Order extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            data: {}
+            data: {},
+            prices: {},
+            price: 0
         }
     }
 
     componentDidMount() {
         fetch('./donotdelete.json')
-          .then((res) => res.json())
-          .then((data) => {
-            this.setState({data});
-          })
+            .then((res) => res.json())
+            .then((data) => {
+                this.setState({data});
+        })
+
+        fetch('./prices.json')
+            .then((res) => res.json())
+            .then((prices) => {
+                this.setState({prices});
+        })
     }
 
     parseOrder() {
@@ -72,6 +80,31 @@ class Order extends Component {
         return cleanString(orderedInits);
     }
 
+    calcPrice() {
+        var data = this.state.data;
+        var price = this.state.price;
+        for (var i in data) {
+            for (var j in data[i].order) {
+                const count = data[i].order[j];
+                fullOrder[j] ? '' : fullOrder[j] = [];
+                for (var k = 0; k < count; k++) {
+
+                }
+            }
+        }
+    }
+
+
+    renderPrice() {
+        const calcPrice = this.calcPrice();
+
+        return (
+            <div>
+                Approximate Price: {calcPrice}
+            </div>
+        )
+    }
+
     renderInits() {
         const parsedInits = this.parseInits();
 
@@ -97,11 +130,16 @@ class Order extends Component {
 
     render() {
         return (
+
             <div className="columns">
                 <div className="column is-mobile order-list">
+                    <div>
+                        {this.renderPrice()}
+                    </div>
                     <h2 className="subtitle">Current Order:</h2>
-                    {this.renderOrder()}
-                </div>
+                    <div className="order-list">
+                        {this.renderOrder()}
+                    </div>
                 <div className="column is-mobile has-ordered">
                     <h2 className="subtitle">People Who Have Ordered:</h2>
                     {this.renderInits()}

@@ -16,6 +16,10 @@ app.get('/donotdelete.json', (req, res) => {
   res.sendFile(path.resolve(__dirname + '/donotdelete.json'));
 });
 
+app.get('/prices.json', (req, res) => {
+  res.sendFile(__dirname + '/prices.json');
+});
+
 io.on('connection', (socket) => {
   console.log('a user connected');
   socket.on('disconnect', () => {
