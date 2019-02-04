@@ -169,15 +169,6 @@ class Order extends Component {
                     <h2 className="subtitle">People Who Have Ordered:</h2>
                     {this.renderInits()}
                 </div>
-<<<<<<< Updated upstream
-=======
-                <div>
-                    {this.renderPrice()}
-                </div>
-                <div className="order-list">
-                    {this.renderOrder()}
-                </div>
->>>>>>> Stashed changes
             </div>
         );
     }
