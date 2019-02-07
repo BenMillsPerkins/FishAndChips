@@ -52,8 +52,6 @@ class Order extends Component {
         for (var k = 0; k < chipCount; k++) {
             fullOrder['Total Chips'].push('|');
         }
-        console.log(fullOrder);
-
 
         if (this.state.data.length != 0) {
             var parsedOrder = [];
