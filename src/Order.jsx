@@ -28,15 +28,32 @@ class Order extends Component {
     parseOrder() {
         var data = this.state.data;
         var fullOrder = [];
+        fullOrder["Total Chips"] = [];
+        var chipCount = 0;
         for (var i in data) {
             for (var j in data[i].order) {
                 const count = data[i].order[j];
+                if (j == 'Team Chips') {
+                    chipCount += 0.5;
+                }
+                if (j == 'Chips') {
+                    chipCount += 1;
+                }
+
                 fullOrder[j] ? '' : fullOrder[j] = [];
                 for (var k = 0; k < count; k++) {
                     fullOrder[j].push(data[i].initials);
                 }
             }
         }
+
+        chipCount = Math.ceil(chipCount);
+
+        for (var k = 0; k < chipCount; k++) {
+            fullOrder['Total Chips'].push('|');
+        }
+        console.log(fullOrder);
+
 
         if (this.state.data.length != 0) {
             var parsedOrder = [];
