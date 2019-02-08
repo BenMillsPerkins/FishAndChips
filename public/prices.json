@@ -19,12 +19,12 @@
     "Beans - Small" : 0.55,
     "Beans - Large" : 0.75,
     "Chicken Nuggets" : 2,
-    "Steak n Kidney Pie (Chip Shop)" : 1.5, // tbc
-    "Meat Pie (Chip Shop)" : 1.5, // tbc
-    "Beef and Onion Pie (Chip Shop)" : 1.5, // tbc
-    "Chicken and Mushroom Pie (Chip Shop)" : 1.5, // tbc
-    "Steak n Kidney Pie (Pastry Shop)" : 1.5, // tbc
-    "Meat Pie (Pastry Shop)" : 1.5, // tbc
-    "Beef and Onion Pie (Pastry Shop)" : 1.5, // tbc
-    "Chicken and Mushroom Pie (Pastry Shop)" : 1.5 // tbc
+    "Steak n Kidney Pie (Chip Shop)" : 1.5,
+    "Meat Pie (Chip Shop)" : 1.5,
+    "Beef and Onion Pie (Chip Shop)" : 1.5,
+    "Chicken and Mushroom Pie (Chip Shop)" : 1.5,
+    "Steak n Kidney Pie (Pastry Shop)" : 1.5,
+    "Meat Pie (Pastry Shop)" : 1.5,
+    "Beef and Onion Pie (Pastry Shop)" : 1.5,
+    "Chicken and Mushroom Pie (Pastry Shop)" : 1.5
 }]
