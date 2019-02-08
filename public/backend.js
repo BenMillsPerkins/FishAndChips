@@ -17,7 +17,7 @@ app.get('/donotdelete.json', (req, res) => {
 });
 
 app.get('/prices.json', (req, res) => {
-  res.sendFile(__dirname + '/prices.json');
+  res.sendFile(path.resolve(__dirname + '/prices.json'));
 });
 
 io.on('connection', (socket) => {

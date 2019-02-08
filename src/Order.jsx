@@ -102,7 +102,7 @@ class Order extends Component {
             for (var i in data) {
                 for (var j in data[i].order) {
                     const count = data[i].order[j];
-                    price = price + prices[0][j];
+                    prices[0][j] ? price = price + (count * prices[0][j]) : '' ;
                 }
             }
         }
@@ -111,7 +111,7 @@ class Order extends Component {
 
 
     renderPrice() {
-        const calcPrice = this.calcPrice();
+        const calcPrice = this.calcPrice().toFixed(2);
 
         return (
             <div>
