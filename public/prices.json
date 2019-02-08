@@ -1,29 +1,30 @@
-[  {"Team Chips" : 0.75,
-    "Fish" : 3,
-    "Fish Butty" : 3.55,
-    "Battered Sausage" : 1.2,
-    "Plain Sausage" : 1,
-    "Battered Sausage Butty" : 1.5,
+[  {"Team Chips" : 0.8,
+    "Fish" : 3.3,
+    "Fish Butty" : 3.80,
+    "Battered Sausage" : 1.3,
+    "Plain Sausage" : 1.1,
+    "Battered Sausage Butty" : 1.8,
+    "Non-Battered Sausage Butty" : 1.6,
     "Cheesy Chips" : 2.1,
-    "Chip Butty" : 1.9,
-    "Scallop" : 0.4,
-    "Curry Sauce - Small" : 0.5,
-    "Curry Sauce - Large" : 0.7,
-    "Mushy Peas - Small" : 0.5,
-    "Mushy Peas - Large" : 0.7,
-    "Gravy - Small" : 0.45,
-    "Gravy - Large" : 0.6,
-    "Chips" : 1.5,
-    "Scampi" : 4,
-    "Beans - Small" : 0.5,
-    "Beans - Large" : 0.7,
-    "Chicken Nuggets" : 1.8,
-    "Steak n Kidney Pie (Chip Shop)" : 1.5,
-    "Meat Pie (Chip Shop)" : 1.5,
-    "Beef and Onion Pie (Chip Shop)" : 1.5,
-    "Chicken and Mushroom Pie (Chip Shop)" : 1.5,
-    "Steak n Kidney Pie (Pastry Shop)" : 1.5,
-    "Meat Pie (Pastry Shop)" : 1.5,
-    "Beef and Onion Pie (Pastry Shop)" : 1.5,
-    "Chicken and Mushroom Pie (Pastry Shop)" : 1.5
+    "Chip Butty" : 2.1,
+    "Scallop" : 0.45,
+    "Curry Sauce - Small" : 0.55,
+    "Curry Sauce - Large" : 0.75,
+    "Mushy Peas - Small" : 0.55,
+    "Mushy Peas - Large" : 0.75,
+    "Gravy - Small" : 0.5,
+    "Gravy - Large" : 0.75,
+    "Chips" : 1.6,
+    "Scampi" : 4.5,
+    "Beans - Small" : 0.55,
+    "Beans - Large" : 0.75,
+    "Chicken Nuggets" : 2,
+    "Steak n Kidney Pie (Chip Shop)" : 1.5, // tbc
+    "Meat Pie (Chip Shop)" : 1.5, // tbc
+    "Beef and Onion Pie (Chip Shop)" : 1.5, // tbc
+    "Chicken and Mushroom Pie (Chip Shop)" : 1.5, // tbc
+    "Steak n Kidney Pie (Pastry Shop)" : 1.5, // tbc
+    "Meat Pie (Pastry Shop)" : 1.5, // tbc
+    "Beef and Onion Pie (Pastry Shop)" : 1.5, // tbc
+    "Chicken and Mushroom Pie (Pastry Shop)" : 1.5 // tbc
 }]
