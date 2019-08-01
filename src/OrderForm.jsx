@@ -261,10 +261,10 @@ function MenuItem(props) {
                         <span>More</span>
                     </button>
                     <button className="button is-info is-outlined add-to-order-button" type="button" name={props.input} onClick = {() => props.updateOrder(props.input)}>
-                    <span className="icon is-small">
-                        <i className="fa fa-check"></i>
-                    </span>
-                    <span>Update Order</span>
+                        <span className="icon is-small">
+                            <i className="fa fa-check"></i>
+                        </span>
+                        <span>Update Order</span>
                     </button>
                     {!props.order[props.input] ? ''
                         : <button className="button is-info is-outlined remove-from-order-button" type="button" name={props.input} onClick = {() => props.removeFromOrder(props.input)}>
