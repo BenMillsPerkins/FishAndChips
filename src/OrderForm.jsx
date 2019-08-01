@@ -213,7 +213,7 @@ class OrderForm extends Component {
 }
 
 function teamInitials() {
-    const team = ["AH", "AO", "AW", "BD", "BMP", "BR", "DO", "EC", "HBD", "KP", "LGM", "LP", "MB", "MC", "MM", "NJ", "SSB", "WO", "Guest1", "Guest2"];
+    const team = ["AH", "AO", "BD", "BMP", "BR", "CSL", "DO", "EBJ", "EC", "HBD", "JC", "KO", "KP", "LP", "MB", "MM", "NJ", "SSB", "WO", "Guest1", "Guest2", "Guest3", "Guest4", "Guest5", "Guest6"];
     const initialsSelect = team.map((p, key) =>
         <option key={key}>{p}</option>
     );
