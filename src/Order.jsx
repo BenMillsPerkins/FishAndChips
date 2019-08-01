@@ -78,18 +78,11 @@ class Order extends Component {
         }
 
         // Removes duplicates
-        function cleanString(str) {
-            const team = ["AH", "AO", "BD", "BMP", "BR", "CSL", "DO", "EBJ", "EC", "HBD", "JC", "KO", "KP", "LP", "MB", "MM", "NJ", "SSB", "WO", "Guest1", "Guest2", "Guest3", "Guest4", "Guest5", "Guest6"];
-            const whoOrdered = [];
-
+        const cleanString = str => {
             str = str.split(" ");
-
-            for (let i = 0; i < team.length; i++) {
-              if (str.includes(team[i])) whoOrdered.push(team[i]);
-            }
-
-            return whoOrdered.join(" ");
-          }
+            str = str.filter((n, i) => str.indexOf(n) === i);
+            return str.join(" ");
+        }
 
         return cleanString(orderedInits);
     }
