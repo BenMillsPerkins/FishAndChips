@@ -2,39 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Order your fish and chips here!</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"/>
   </head>
   <body>
     <style>
-    .loader {
-        border: 8px solid #f3f3f3; /* Light grey */
-        border-top: 8px solid black; /* Black */
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        animation: spin 2s linear infinite;
-        margin: 100px auto;
-    }
+        .loader {
+            border: 8px solid #f3f3f3; /* Light grey */
+            border-top: 8px solid black; /* Black */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+            margin: 100px auto;
+        }
 
-    @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
 
-    @keyframes position-left-to-right {
-        from {left: 5%;}
-        to {left: 85%;}
-    }
+        @keyframes position-left-to-right {
+            from {left: 5%;}
+            to {left: 85%;}
+        }
 
-    @keyframes position-right-to-left {
-        from {left: 85%;}
-        to {left: 5%;}
-    }
+        @keyframes position-right-to-left {
+            from {left: 85%;}
+            to {left: 5%;}
+        }
     </style>
-    <div class="divider"></div>
-    <div id="root"> <div class="loader"></div> </div>
+    <!-- <div class="divider"></div> -->
+    <div id="root">
+        <div class="loader"></div>
+    </div>
     <!--
       The loader is overwritten by React.
       This HTML file is a template.
@@ -47,6 +51,6 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <script src="/react-jsx/"></script>
-    <div class="bottom-banner"></div>
+    <!-- <div class="bottom-banner"></div> -->
   </body>
 </html>

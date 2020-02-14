@@ -16,6 +16,10 @@ app.get('/donotdelete.json', (req, res) => {
   res.sendFile(path.resolve(__dirname + '/donotdelete.json'));
 });
 
+app.get('/prices.json', (req, res) => {
+  res.sendFile(path.resolve(__dirname + '/prices.json'));
+});
+
 io.on('connection', (socket) => {
   console.log('a user connected');
   socket.on('disconnect', () => {
@@ -37,6 +41,6 @@ io.on('connection', (socket) => {
 
 
 
-http.listen(3000, () => {
-  console.log('listening on *:3000');
+http.listen(80, () => {
+  console.log('listening on *:80');
 })

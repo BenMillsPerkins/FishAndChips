@@ -15,18 +15,29 @@ class App extends Component {
     render() {
         return (
             <div>
-                <h1 className="banner-text bold">Fish and Chip Order Form</h1>
+                <section className="hero is-info">
+                    <div className="hero-body">
+                        <div className="container">
+                            <h1 className="title">Fish and Chips</h1>
+                            <h2 className="subtitle">Order Form</h2>
+                        </div>
+                    </div>
+                </section>
                 {this.state.stage === 'DisplayOrder' ?
-                <div className="order-display">
-                    Current Order:
+                <div className="container main-content main-content--home">
                     <Order />
-                    <button className="next-q-button" type="button" onClick = {() => this.setState({stage: 'OrderForm'})}> Add my order <i className="fa fa-chevron-right"></i></button>
+                    <button className="button is-info order-add" type="button" onClick = {() => this.setState({stage: 'OrderForm'})}><i className="fa fa-pencil"></i> Add my order</button>
                 </div>
                 :
                 <div>
                     <OrderForm />
                 </div>
                 }
+                <footer className="footer">
+                    <div className="content has-text-centered">
+                        <p><strong>Phone Number:</strong> 01422 842 599</p>
+                    </div>
+                </footer>
             </div>
         );
     }
